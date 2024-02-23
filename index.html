@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>oklahoma</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-image: url('image1.jpg'); /* Default background image */
+        /* background-size: cover; */
+        background-repeat: repeat;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+    <button onclick="changeBackground()">click.</button>
+
+    <script>
+        function changeBackground() {
+            var currentImage = document.body.style.backgroundImage;
+            var newImage = currentImage.includes('image1.jpg') ? 'url(./hi.png)' : 'url(image1.jpg)';
+            document.body.style.backgroundImage = newImage;
+        }
+    </script>
+</body>
+</html>
